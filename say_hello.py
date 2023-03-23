@@ -13,8 +13,6 @@ class SayHello(App):
         self.window.pos_hint = {"center_x": 0.5, "center_y": 0.5}
         
         
-        
-        
         #add widgets to window
         # image widget
         self.window.add_widget(Image(source="robo pensador.jpg"))
@@ -51,9 +49,5 @@ class SayHello(App):
         self.greeting.text = "Hello " + self.user.text + "!"
         
         
-        
-        
-        
-
 if __name__ == "__main__":
     SayHello().run()
