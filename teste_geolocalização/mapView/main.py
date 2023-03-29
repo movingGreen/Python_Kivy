@@ -5,8 +5,8 @@ class MainApp(App):
    
     
     def on_start(self):
-        latitude = -25
-        longitude = -25
+        latitude = 25
+        longitude = 25
         marker = MapMarkerPopup(lat = latitude, lon = longitude)
         # self.root.lat = latitude
         # self.root.lon = longitude
