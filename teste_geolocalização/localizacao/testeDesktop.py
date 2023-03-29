@@ -3,7 +3,7 @@ from kivy.uix.label import Label
 from geopy.geocoders import Nominatim
 
 
-class MyApp(App):
+class MyApp(App):  
     def build(self):
         label = Label(text = self.get_location())
         return label
