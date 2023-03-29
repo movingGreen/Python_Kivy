@@ -4,7 +4,7 @@ from kivy.garden.mapview import MapMarkerPopup
 class MainApp(App):
    
     
-    def on_start(self):
+    def build(self):
         latitude = 25
         longitude = 25
         marker = MapMarkerPopup(lat = latitude, lon = longitude)
