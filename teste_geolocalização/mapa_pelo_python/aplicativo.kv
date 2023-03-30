@@ -1,0 +1,15 @@
+GerenciarTelas:
+    TelaLogin:
+        name: 'tela_login'
+    TelaMapa:
+        name: 'tela_mapa'
+
+<TelaLogin>:
+    BoxLayout:
+        Label:
+            text: 'Login'
+        Button:
+            text: 'Mapa'
+            on_release: app.root.current = 'tela_mapa'
+
+<TelaMapa>:
