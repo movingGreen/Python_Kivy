@@ -1,7 +1,8 @@
 from kivy.app import App
 from kivy.uix.label import Label
+from kivy.utils import platform
 from geopy.geocoders import Nominatim
-# from jnius import autoclass
+from jnius import autoclass
 
 class MyApp(App):
     def build(self):
