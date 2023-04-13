@@ -14,17 +14,24 @@ class MyGridLayout(GridLayout):
         # crie as colunas
         self.cols = 1
         
+        # criar um segundo gridlayout
+        self.top_grid = GridLayout()
+        self.top_grid.cols = 2
+        
         # adicionar widgets 
-        self.add_widget(Label(text = "Usuario: "))
+        self.top_grid.add_widget(Label(text = "Usuario: "))
         
         # adicionar Input Box
         self.name = TextInput(multiline = False)
-        self.add_widget(self.name)
+        self.top_grid.add_widget(self.name)
         
-        self.add_widget(Label(text = "Senha: "))
+        self.top_grid.add_widget(Label(text = "Senha: "))
         # adicionar Input Box
         self.senha = TextInput(multiline = False)
-        self.add_widget(self.senha)
+        self.top_grid.add_widget(self.senha)
+        
+        # adicionar o top_grid no app
+        self.add_widget(self.top_grid)
         
         # adicionar um submit botão
         self.submit = Button(text = "LOGIN", font_size = 25)
