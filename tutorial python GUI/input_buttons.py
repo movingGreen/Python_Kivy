@@ -23,12 +23,28 @@ class MyGridLayout(GridLayout):
         
         self.add_widget(Label(text = "Senha: "))
         # adicionar Input Box
-        self.pizza = TextInput(multiline = False)
-        self.add_widget(self.pizza)
+        self.senha = TextInput(multiline = False)
+        self.add_widget(self.senha)
         
         # adicionar um submit botão
-        self.submit = Button(text = "Submit", font_size = 25)
+        self.submit = Button(text = "LOGIN", font_size = 25)
+        self.submit.bind(on_press = self.press)
+        
         self.add_widget(self.submit)
+        
+    # método press
+    def press(self, instance):
+        username = self.name.text
+        password = self.senha.text
+        
+        if username != "" and not username.isspace():
+            print(f'Usuario: {username}, Senha: {password}')
+            self.add_widget(Label(text = f"Olá {username}"))
+        else: 
+            print("Usuario vazio")
+        #limpar o texto dos campos de input
+        self.name.text = ""
+        self.senha.text = ""
 
 class MyApp(App):
     def build(self):
