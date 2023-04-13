@@ -14,7 +14,7 @@ class TelaLogin(Screen):
     pass
 
 class TelaMapa(Screen):
-    def on_start(self):
+    def build(self):
         usuario_localizacao = self.get_location()
         print (f"longitude {usuario_localizacao.longitude} \n latitude {usuario_localizacao.latitude} ")
         
