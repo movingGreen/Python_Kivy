@@ -16,7 +16,7 @@ class MyGridLayout(GridLayout):
         
         # criar um segundo gridlayout
         self.top_grid = GridLayout()
-        self.top_grid.cols = 2
+        self.top_grid.cols = 1
         
         # adicionar widgets 
         self.top_grid.add_widget(Label(text = "Usuario: "))
