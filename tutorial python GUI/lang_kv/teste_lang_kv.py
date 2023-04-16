@@ -4,8 +4,9 @@ from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
+from kivy.uix.widget import Widget
 
-class MyGridLayout(GridLayout):
+class MyGridLayout(Widget):
     # inicializar a palavra chave infinite
     def __init__(self, **kwargs):
         # Chamar o construtor do grid layout
@@ -25,45 +26,7 @@ class MyGridLayout(GridLayout):
             col_force_default = True,
             col_default_width = 400
         )
-        self.top_grid.cols = 2
-        
-        # adicionar widgets 
-        self.top_grid.add_widget(Label(
-            text = "Usuario: ",
-            font_size = 32,
-            ))
-        
-        # adicionar Input Box
-        self.name = TextInput(
-            multiline = False,
-            font_size = 32,
-            )
-        self.top_grid.add_widget(self.name)
-        
-        self.top_grid.add_widget(Label(
-            text = "Senha: ",
-            font_size = 32,
-            ))
-        # adicionar Input Box
-        self.senha = TextInput(
-            multiline = False,
-            font_size = 32,  
-            )
-        self.top_grid.add_widget(self.senha)
-        
-        # adicionar o top_grid no app
-        self.add_widget(self.top_grid)
-        
-        # adicionar um submit botão
-        self.submit = Button(text = "LOGIN",
-                             font_size = 32,
-                             size_hint_y = None,
-                             height = 50
-                             )
-        self.submit.bind(on_press = self.press)
-        
-        self.add_widget(self.submit)
-        
+     
     # método press
     def press(self, instance):
         username = self.name.text
