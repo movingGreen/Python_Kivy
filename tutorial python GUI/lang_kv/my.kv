@@ -1,6 +1,9 @@
 #:kivy 2.1.0
 
 <MyGridLayout>
+    name: name
+    senha: senha
+
     GridLayout:
         cols: 1
         size: root.width, root.height
@@ -10,13 +13,16 @@
             Label:
                 text: "Login"
             TextInput:
+                id: name
                 multiline: False
 
             Label:
                 text: "Senha"
             TextInput:
+                id: senha
                 multiline: False
 
         Button:
             text: "Login"
             font_size: 40
+            on_press: root.press()
