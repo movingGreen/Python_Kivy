@@ -1,5 +1,5 @@
 from kivy.app import App
-from kivy.garden.mapview import MapMarkerPopup
+from mapView import 
 
 class MainApp(App):
     def on_start(self):
