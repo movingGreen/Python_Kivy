@@ -1,0 +1,41 @@
+#:kivy 2.1.0
+
+WindowManager:
+    PrimeiraTela:
+    SegundaTela:
+
+<PrimeiraTela>:
+    name: "primeira"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            text: "Primeira tela"
+            font_size: 32
+
+        Button:
+            text: "Segunda tela"
+            font_size: 32
+            on_release: 
+                app.root.current = "segunda"
+                root.manager.transition.direction = "left"
+
+<SegundaTela>:
+    name: "segunda"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            text: "Segunda tela"
+            font_size: 32
+
+        Button:
+            text: "Primeira tela"
+            font_size: 32
+            on_release: 
+                app.root.current = "primeira"
+                root.manager.transition.direction = "right"
