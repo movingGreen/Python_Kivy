@@ -1,0 +1,51 @@
+#:kivy 2.1.0
+
+GerenciadorTelas:
+    LoginTela:
+    MapaTela:
+
+<LoginTela>:
+    name: "loginTela"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            text: "Username"
+            font_size: 32
+
+        TextInput:
+            multiline: False
+
+        Label:
+            text: "Password"
+            font_size: 32
+
+        TextInput:
+            multilene: False
+
+        Button:
+            text: "Login"
+            font_size: 32
+            on_release: 
+                app.root.current = "mapaTela"
+                root.manager.transition.direction = "left"
+
+
+<MapaTela>:
+    name: "mapaTela"
+    
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: "MAPA"
+
+
+        Button:
+            text: "Voltar"
+            font_size: 35
+            on_release: 
+                app.root.current = "loginTela"
+                root.manager.transition.direction = "right"
