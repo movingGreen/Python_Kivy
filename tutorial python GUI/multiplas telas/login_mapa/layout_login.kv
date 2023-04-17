@@ -1,5 +1,6 @@
 #:kivy 2.1.0
 #:import MapView kivy_garden.mapview.MapView
+#:import MapMarkerPopup kivy_garden.mapview.MapMarkerPopup
 
 GerenciadorTelas:
     LoginTela:
@@ -46,7 +47,12 @@ GerenciadorTelas:
             lat: -15.573150
             lon: -56.035578
             zoom: 17
-        
+
+            MapMarkerPopup:
+                lat: -15.573150
+                lon: -56.035578
+                source: "marker_pequeno.png"       
+                 
         Button:
             text: "Voltar"
             font_size: 35
