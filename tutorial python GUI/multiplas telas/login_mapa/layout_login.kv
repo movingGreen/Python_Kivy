@@ -1,0 +1,57 @@
+#:kivy 2.1.0
+#:import MapView kivy_garden.mapview.MapView
+
+GerenciadorTelas:
+    LoginTela:
+    MapaTela:
+
+<LoginTela>:
+    name: "loginTela"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            text: "Username"
+            font_size: 32
+
+        TextInput:
+            multiline: False
+            font_size: 32
+
+        Label:
+            text: "Password"
+            font_size: 32
+
+        TextInput:
+            multilene: False
+            font_size: 32
+
+        Button:
+            text: "Login"
+            font_size: 32
+            on_release: 
+                app.root.current = "mapaTela"
+                root.manager.transition.direction = "left"
+
+
+<MapaTela>:
+    name: "mapaTela"
+    
+    BoxLayout:
+        orientation: "vertical"
+
+        MapView:    
+            lat: -15.573150
+            lon: -56.035578
+            zoom: 17
+        
+        Button:
+            text: "Voltar"
+            font_size: 35
+            size_hint: (1, .1)
+
+            on_release: 
+                app.root.current = "loginTela"
+                root.manager.transition.direction = "right"
