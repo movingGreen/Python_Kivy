@@ -1,0 +1,5 @@
+mapa 
+giroscópio
+camera
+bulsula 
+controle de estado

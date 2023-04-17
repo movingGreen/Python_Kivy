@@ -1,0 +1,2 @@
+lib KivyMD precisa do Kivy == 2.2+
+até a data 14/04/2023 essa versão só está disponível em pre-built
