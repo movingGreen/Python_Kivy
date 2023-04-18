@@ -1,5 +1,5 @@
 mapa 
 giroscópio
 camera
-bulsula 
+bússola 
 controle de estado
