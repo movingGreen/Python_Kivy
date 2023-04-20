@@ -4,3 +4,20 @@
     MapView:
         id: main_map
         size: root.width, root.height
+
+        MapMarkerPopup:
+            id: main_map_me
+            lat: -15.57
+            lon: -56.03
+            source: 'ponto_32.png'
+            
+            Button:
+                size: root.width * 0.1, root.height * 0.1
+                background_color: 0, 0, 0, 0
+                background_normal: ''
+                on_press: root.press()
+                canvas.before:
+                    Ellipse:
+                        # source: 'marker_32.png'
+                        angle_start: 0
+                        angle_end: 360

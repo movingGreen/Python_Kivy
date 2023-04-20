@@ -10,17 +10,10 @@ class telaPrincipal(Widget):
         super().__init__(**kwargs)
         
         self.ids.main_map.zoom = 15
-        self.ids.main_map.center_on(-15.57, -56.03)
-
-        self.pin = MapMarkerPopup(lat = -15.57, lon = -56.03, source = "marker_pequeno.png")
-        self.btn = Button(size = (self.width * .2, self.height * .05), on_press = self.show)
+        self.ids.main_map.center_on(self.ids.main_map_me.lat, self.ids.main_map_me.lon)
         
-        self.pin.add_widget(self.btn)
-        self.ids.main_map.add_widget(self.pin)
-
-    def show(self, instance):
-        print(str(self.pin.lat,) + ' | ' + str(self.pin.lon))
-        
+    def press(self):
+        print(str(self.ids.main_map_me.lat) + ' | ' + str(self.ids.main_map_me.lon))  
         
 class aplicacao(App):
     def build(self):
