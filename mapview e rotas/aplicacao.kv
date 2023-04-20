@@ -21,3 +21,15 @@
                         # source: 'marker_32.png'
                         angle_start: 0
                         angle_end: 360
+
+        Button:
+            text:'place pin'
+            size: root.width * 0.3, root.height * 0.05
+            pos: 0, 0
+            on_press: root.place_pin()        
+
+        Button:
+            text:'remove pin'
+            size: root.width * 0.3, root.height * 0.05
+            pos: root.width * 0.7, 0
+            on_press: root.remove_pin()                 
