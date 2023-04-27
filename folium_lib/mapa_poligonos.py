@@ -29,10 +29,20 @@ folium.Polygon([(25.4024022, 81.7315446), (25.6081756, 85.073003), (20.4631843, 
                fill_color="yellow",
                fill_opacity=0.3).add_to(shapesLayer)
 
-# create a circle
+# criar um circulo com raio em pixels
 folium.CircleMarker(location=[23.294059708387206, 78.26660156250001],
               radius=50
               ).add_to(shapesLayer)
+
+# criar um circulo com raio em metros
+folium.Circle(location=[25, 79],
+              radius=50000,
+              color='green',
+              weight=6,
+              fill_color='red',
+              fill_opacity = 0.5
+              ).add_to(shapesLayer)
+
 
 
 # display the layer switcher widget
